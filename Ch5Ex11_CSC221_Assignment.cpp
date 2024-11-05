@@ -40,9 +40,6 @@ int main()
     duration = validateDuration(duration);
     outputGrowth(startingPopulation, dailyPopulationGrowth, duration);
 
-    //loop
-            //cout the size of the population for each day.
-    
     return 0;
 }
 
