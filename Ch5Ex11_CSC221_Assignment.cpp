@@ -46,7 +46,7 @@ int main()
 // Display the results.
 void outputGrowth(int startingPopulation, double dailyPopulationGrowth, int duration) {
     unsigned long accumulatedPopulation = startingPopulation;
-    unsigned long dailyIncrease;
+    unsigned long dailyIncrease = 0;
     unsigned long previousIncrease;
     cout << "\n\n The growth model is complete!";
     cout <<   "\n-------------------------------\n";
@@ -59,6 +59,9 @@ void outputGrowth(int startingPopulation, double dailyPopulationGrowth, int dura
         // intentionally converting a double to a unsigned long, as a population of organisms has to grow by whole numbers
         dailyIncrease = accumulatedPopulation * dailyPopulationGrowth;
         accumulatedPopulation += dailyIncrease;
+    }
+    if (dailyIncrease < 1) {
+        cout << "Unfortunately, the daily growth rate is less then 1 organism, so the population will never increase." << endl;
     }
 }
 
