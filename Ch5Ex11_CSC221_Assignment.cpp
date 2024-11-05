@@ -58,6 +58,7 @@ void outputGrowth(int startingPopulation, double dailyPopulationGrowth, int dura
         cout << "The population increased by " << dailyIncrease << ".";
         }
         cout << endl;
+        // intentionally converting a double to a unsigned long, as a population of organisms has to grow by whole numbers
         dailyIncrease = accumulatedPopulation * dailyPopulationGrowth;
         accumulatedPopulation += dailyIncrease;
     }
