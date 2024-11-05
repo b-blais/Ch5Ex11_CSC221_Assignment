@@ -47,12 +47,13 @@ int main()
 void outputGrowth(int startingPopulation, double dailyPopulationGrowth, int duration) {
     unsigned long accumulatedPopulation = startingPopulation;
     unsigned long dailyIncrease;
+    unsigned long previousIncrease;
     cout << "\n\n The growth model is complete!";
     cout <<   "\n-------------------------------\n";
     for (int days = 1; days < (duration + 1); days++ ) {
         cout << "  Day " << days << " population is " << accumulatedPopulation << ".  ";
         if (days > 1) {
-        cout << "The population increased by " << dailyIncrease << ".";
+            cout << "The population increased by " << dailyIncrease << ".";
         }
         cout << endl;
         // intentionally converting a double to a unsigned long, as a population of organisms has to grow by whole numbers
